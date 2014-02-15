@@ -21,7 +21,8 @@ app.configure(function() {
     src: publicDir
   }));
   app.use(express.static(publicDir));
-  app.use(express.bodyParser());
+  app.use(express.json());
+  app.use(express.urlencoded());
 });
 
 app.post('/voice-command', routes.voiceCommand.submit);
