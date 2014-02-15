@@ -4,8 +4,13 @@ Using [wit.ai](wit.ai)'s API control your AR drone with voice commands.
 
 ## Commands currently supported
 
-- takeoff
+- back
+- clockwise (turn right)
+- counter clockwise (turn left)
+- forward
 - land
+- stop
+- takeoff
 
 ## Usage
 

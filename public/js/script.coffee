@@ -8,11 +8,7 @@ config =
 
 # Video stream
 
-new NodecopterStream(
-    document.getElementById('dronestream'),
-    { port: 3001 }
-)
-
+try new NodecopterStream document.getElementById('dronestream'), port: 3001
 
 # Mic
 
