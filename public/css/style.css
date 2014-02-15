@@ -1,14 +1,10 @@
 html, body {
   height: 100%;
 }
-
-header {
-  background: black;
-  color: #afafaf;
-}
 #main {
   height: 100%;
 }
+
 #dronestream {
     position: absolute;
     z-index: -1;
@@ -23,7 +19,14 @@ header {
     width: 100%;
     height: 100%;
 }
+
 #sidebar {
-  background: red;
   height: 100%;
+}
+#sidebar header {
+  background: white;
+  border-bottom: 1px solid black;
+}
+#sidebar .command {
+  border-bottom: 1px solid black;
 }

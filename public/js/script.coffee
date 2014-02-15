@@ -1,5 +1,6 @@
-$doc   = $ document
+$doc                  = $ document
 $recording_indicators = $ '.recording_indicators'
+$commands             = $ '#commands'
 
 config =
   endpoint: '/voice-command'
@@ -27,9 +28,8 @@ $doc.on 'keyup',   (e) -> if e.keyCode is 32 then do ->
 
 mic.onresult = (intent, entities, msg) ->
   if not intent? then do ->
-
+    $commands.append $ '<div class="error command">Could not understand' + msg.msg_body + '</div>'
   else $.post(config.endpoint, { intent, entities }).then ->
-    console.log intent
-    console.log entities
+    $commands.append $ '<div class="command">' + intent + '</div>'
 
 mic.connect config.witToken
