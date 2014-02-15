@@ -5,6 +5,16 @@ config =
   endpoint: '/voice-command'
   witToken: 'L4LKEBK5JLCAGT2NUHB6XCWJMV55AWLL'
 
+# Video stream
+
+new NodecopterStream(
+    document.getElementById('dronestream'),
+    { port: 3001 }
+)
+
+
+# Mic
+
 mic = new Wit.Microphone document.getElementById 'mic-container'
 
 $doc.on 'keydown', (e) -> if e.keyCode is 32 then do ->

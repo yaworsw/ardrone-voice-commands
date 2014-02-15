@@ -6,20 +6,15 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="row">
-      <header class="col-xs-12">
-        <h1>Air Traffic</h1>
-      </header>
-    </div>
-    <div class="row">
       <div id="main" class="col-xs-9">
-        <div id="microphone-container"></div>
+        <div id="dronestream"></div>
       </div>
       <div id="sidebar" class="col-xs-3">
-
+        <header>Command Log</header>
+        <div id="commands"></div>
       </div>
-    </div>
     <div id="mic-container" style="position:absolute;left:-1000000px"></div>
+    <script src="/vendor/dronestream.js"></script>
     <script src="/wit/microphone.js"></script>
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/js/script.js"></script>
