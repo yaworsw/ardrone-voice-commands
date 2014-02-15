@@ -1,17 +1,18 @@
 <!doctype html>
-<html ng-app="air-traffic">
+<html>
   <head>
+    <title>AR Drone Voice Command</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-      <div id="main" class="col-xs-9">
-        <div id="dronestream"></div>
-      </div>
-      <div id="sidebar" class="col-xs-3">
-        <header>Command Log</header>
-        <div id="commands"></div>
-      </div>
+    <div id="main" class="col-xs-9">
+      <div id="dronestream"></div>
+    </div>
+    <div id="sidebar" class="col-xs-3">
+      <header>Command Log</header>
+      <div id="commands"></div>
+    </div>
     <div id="mic-container" style="position:absolute;left:-1000000px"></div>
     <script src="/wit/microphone.js"></script>
     <script src="/vendor/dronestream.js"></script>
