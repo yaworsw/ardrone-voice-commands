@@ -1,13 +1,12 @@
 {
   "scripts": {
-    "postinstall": "bower install",
-    "postupdate":  "bower update",
     "start":       "node index.js"
   },
   "dependencies": {
     "ar-drone":          "",
     "coffee-middleware": "",
     "dronestream":       "",
-    "express":           ""
+    "express":           "",
+    "jquery":            ""
   }
 }

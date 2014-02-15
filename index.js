@@ -28,7 +28,13 @@ app.post('/voice-command', routes.voiceCommand.submit);
 
 app.get('/vendor/dronestream.js', function(req, res) {
   res.sendfile(path.join(
-      'node_modules', 'dronestream', 'dist', 'nodecopter-client.js'
+    'node_modules', 'dronestream', 'dist', 'nodecopter-client.js'
+  ));
+});
+
+app.get('/vendor/jquery.js', function(req, res) {
+  res.sendfile(path.join(
+    'node_modules', 'jquery', 'dist',  'jquery.min.js'
   ));
 });
 
