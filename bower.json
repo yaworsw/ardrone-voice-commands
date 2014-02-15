@@ -1,0 +1,7 @@
+{
+  "name": "air-traffic",
+  "dependencies": {
+    "jquery":    "",
+    "bootstrap": ""
+  }
+}
