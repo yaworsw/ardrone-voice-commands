@@ -14,18 +14,23 @@ try new NodecopterStream document.getElementById('dronestream'), port: 3001
 
 mic = new Wit.Microphone document.getElementById 'mic-container'
 
-$doc.on 'keydown', (e) -> if e.keyCode is 32 then do ->
-  $recording_indicators.addClass 'active'
-  do mic.start
-
-$doc.on 'keyup',   (e) -> if e.keyCode is 32 then do ->
-  $recording_indicators.removeClass 'active'
-  do mic.stop
+spaceBar = 32 # key code for space bar
+$doc.on 'keydown', (e) -> if e.keyCode is spaceBar then do mic.start and $recording_indicators.addClass    'active'
+$doc.on 'keyup',   (e) -> if e.keyCode is spaceBar then do mic.stop  and $recording_indicators.removeClass 'active'
 
 mic.onresult = (intent, entities, msg) ->
-  if not intent? then do ->
-    $commands.append $ '<div class="error command">Could not understand' + msg.msg_body + '</div>'
-  else $.post(config.endpoint, { intent, entities }).then ->
-    $commands.append $ '<div class="command">' + intent + '</div>'
+  if intent? then sendCommand.apply @, arguments
+  else logError.apply @, arguments
+
+# Sends a command to the server
+sendCommand = (intent, entities, msg) ->
+  $.post(config.endpoint, { intent, entities }).then -> logCommand intent
+
+# Logs a misunderstood command
+logError = (intent, entities, msg) -> logCommand msg.msg_body, ['error']
+
+# Logs a successful command
+logCommand = (msg, classes) ->
+  $('<div class="command"></div>').addClass(classes).html(msg).appendTo($commands)
 
 mic.connect config.witToken
