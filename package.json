@@ -1,4 +1,5 @@
 {
+  "name": "ardrone-voice-commands",
   "scripts": {
     "start":       "node index.js"
   },
