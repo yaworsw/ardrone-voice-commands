@@ -58,7 +58,7 @@ body > header .active.recording-indicator {
 }
 
 /* PNG Stream */
-#video {
+#png-stream {
   height: 100%;
   width: 100%;
 }
