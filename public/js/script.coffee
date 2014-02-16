@@ -9,6 +9,11 @@ config =
 # Video stream
 
 try new NodecopterStream document.getElementById('dronestream'), port: 3001
+catch
+  video       = $('<img id="video" src="" />').appendTo('#dronestream')
+  updateVideo = -> video.attr('src', "/camera/#{new Date().getTime()}")
+  do updateVideo
+  setInterval updateVideo, 100
 
 # Mic
 

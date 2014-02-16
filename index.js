@@ -26,6 +26,7 @@ app.configure(function() {
 });
 
 app.post('/voice-command', routes.voiceCommand.submit);
+app.get('/camera/:id', routes.pngStream.get);
 
 app.get('/vendor/dronestream.js', function(req, res) {
   res.sendfile(path.join(

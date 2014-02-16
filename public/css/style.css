@@ -43,13 +43,12 @@ body > header .active.recording-indicator {
   width: 300px;
 }
 .command {
-  background: black;
-
   /* http://border-radius.com/ */
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 
+  background: black;
   color: #aeaeae;
   padding: 10px;
   margin: 15px 15px 0 0;
