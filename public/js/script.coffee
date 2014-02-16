@@ -30,7 +30,12 @@ sendCommand = (intent, entities, msg) ->
 logError = (intent, entities, msg) -> logCommand msg.msg_body, ['error']
 
 # Logs a successful command
-logCommand = (msg, classes) ->
-  $('<div class="command"></div>').addClass(classes).html(msg).appendTo($commands)
+logCommand = do ->
+  commandsOnScreen = 0
+  (msg, classes) ->
+    el = $('<div class="command"></div>').addClass(classes).html(msg).hide().appendTo($commands).slideDown()
+    commandsOnScreen += 1
+    if commandsOnScreen > 5 then $('.command').first().slideUp('normal', -> do $(this).remove )
+    el
 
 mic.connect config.witToken
