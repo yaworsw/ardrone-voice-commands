@@ -10,7 +10,8 @@ config =
 
 try new NodecopterStream document.getElementById('dronestream'), port: 3001
 catch
-  video       = $('<img id="video" src="" />').appendTo('#dronestream')
+  video       = $('<img id="video" src="" />')
+  $('#dronestream canvas').replaceWith video
   updateVideo = -> video.attr('src', "/camera/#{new Date().getTime()}")
   do updateVideo
   setInterval updateVideo, 100

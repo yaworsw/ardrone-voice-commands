@@ -57,6 +57,12 @@ body > header .active.recording-indicator {
   color: red;
 }
 
+/* PNG Stream */
+#video {
+  height: 100%;
+  width: 100%;
+}
+
 /* Drone stream */
 #dronestream {
   position: absolute;
