@@ -1,5 +1,5 @@
 $doc                  = $ document
-$recording_indicators = $ '.recording_indicators'
+$recording_indicators = $ '.recording-indicator'
 $commands             = $ '#commands'
 
 config =
