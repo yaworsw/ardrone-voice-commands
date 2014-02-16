@@ -1,6 +1,6 @@
 # AR Drone Voice Commands
 
-Using [wit.ai](wit.ai)'s API control your AR drone with voice commands.
+Using [wit.ai](http://wit.ai)'s API control your AR drone with voice commands.
 
 ## Commands currently supported
 
