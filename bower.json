@@ -1,6 +1,7 @@
 {
   "name": "ardrone-voice-commands",
   "dependencies": {
-    "wit-widgets": "https://github.com/wit-ai/wit-widgets/releases/download/0.3.0/microphone-0.3.0.tar.gz"
+    "wit-widgets": "https://github.com/wit-ai/wit-widgets/releases/download/0.3.0/microphone-0.3.0.tar.gz",
+    "jquery":      "~2.0"
   }
 }

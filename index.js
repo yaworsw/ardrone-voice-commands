@@ -33,12 +33,6 @@ app.get('/vendor/dronestream.js', function(req, res) {
   ));
 });
 
-app.get('/vendor/jquery.js', function(req, res) {
-  res.sendfile(path.join(
-    'node_modules', 'jquery', 'dist', 'jquery.min.js'
-  ));
-});
-
 app.listen(port, function() {
   console.log('Web server is now listening on port: ' + port);
 });
