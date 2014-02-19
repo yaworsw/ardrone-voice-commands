@@ -5,6 +5,7 @@ Using [wit.ai](http://wit.ai)'s API control your AR drone with voice commands.
 ## Commands currently supported
 
 - back
+- backflip
 - barrel roll
 - clockwise (turn right)
 - counter clockwise (turn left)
@@ -16,7 +17,9 @@ Using [wit.ai](http://wit.ai)'s API control your AR drone with voice commands.
 - right
 - stop
 - takeoff
+- turn around
 - up
+- yaw dance
 
 ## Usage
 
