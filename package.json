@@ -9,6 +9,6 @@
     "ar-drone":          "",
     "coffee-middleware": "",
     "dronestream":       "",
-    "express":           ""
+    "express":           "3.x"
   }
 }
